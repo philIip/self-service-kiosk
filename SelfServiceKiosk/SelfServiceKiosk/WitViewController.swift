@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 import SwiftyJSON
 import Wit
-
+import MBProgressHUD
 
 class WitViewController: UIViewController, WitDelegate, UITableViewDataSource, UITableViewDelegate {
   var statusView: UILabel?
@@ -55,6 +55,7 @@ class WitViewController: UIViewController, WitDelegate, UITableViewDataSource, U
     
     if matchedItems.count == 0 {
         // no matched items
+      showErrorMessage("The item \(menuItem) is not on our menu")
     } else {
         switch intent {
         case "add_order": items.append(matchedItems[0])
@@ -73,6 +74,15 @@ class WitViewController: UIViewController, WitDelegate, UITableViewDataSource, U
     }
     
     tableView.reloadData()
+  }
+
+  func showErrorMessage(text: String) {
+    let hud = MBProgressHUD.showHUDAddedTo(view, animated: true)
+    //    hud.activityIndicatorColor = UIColor.redColor()
+    hud.mode = MBProgressHUDMode.Text
+    hud.animationType = MBProgressHUDAnimation.Fade
+    hud.labelText = text
+    hud.hide(true, afterDelay: 2)
   }
 
   func witActivityDetectorStarted() {

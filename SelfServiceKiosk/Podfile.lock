@@ -1,15 +1,18 @@
 PODS:
   - Alamofire (3.1.1)
+  - MBProgressHUD (0.9.1)
   - SwiftyJSON (2.3.1)
   - Wit (4.1.0)
 
 DEPENDENCIES:
   - Alamofire
+  - MBProgressHUD
   - SwiftyJSON
   - Wit
 
 SPEC CHECKSUMS:
   Alamofire: 9b0a7188b961a03914a99304488bd226b0e46c0e
+  MBProgressHUD: c47f2c166c126cf2ce36498d80f33e754d4e93ad
   SwiftyJSON: 592b53bee5ef3dd9b3bebc6b9cb7ee35426ae8c3
   Wit: c00af597e168d45b00109993bb378ce86456c346
 
