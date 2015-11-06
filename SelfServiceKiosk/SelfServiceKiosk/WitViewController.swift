@@ -28,27 +28,28 @@ class WitViewController: UIViewController, WitDelegate {
     // create the button
     let screen: CGRect = UIScreen.mainScreen().bounds
     let w: CGFloat = 100
-    let rect: CGRect = CGRectMake(screen.size.width/2 - w/2, 60, w, 100)
+    let rect: CGRect = CGRectMake(screen.size.width/2 - w/2, screen.size.height - (w + w/2), w, w)
 
     witButton = WITMicButton.init(frame: rect)
     view.addSubview(witButton!)
 
-    // create the label
-    intentView = UILabel.init(frame: CGRectMake(0, 200, screen.size.width, 50))
-    intentView?.textAlignment = NSTextAlignment.Center
-    entitiesView = UITextView.init(frame: CGRectMake(0, 250, screen.size.width, screen.size.height - 300))
-    entitiesView?.backgroundColor = UIColor.lightGrayColor()
-    view.addSubview(entitiesView!)
-    view.addSubview(intentView!)
-    intentView?.text = "Intent will show up here"
-    // entitiesView?.textAlignment = NSTextAlignment.Center
-    entitiesView?.text = "Entities will show up here"
-    entitiesView?.editable = false
-    entitiesView?.font = UIFont.systemFontOfSize(17)
-
-    statusView = UILabel.init(frame: CGRectMake(0, 150, screen.size.width, 50))
-    statusView?.textAlignment = NSTextAlignment.Center
-    view.addSubview(statusView!)
+//    // create the label
+//    intentView = UILabel.init(frame: CGRectMake(0, 200, screen.size.width, 50))
+//    intentView?.textAlignment = NSTextAlignment.Center
+//    entitiesView = UITextView.init(frame: CGRectMake(0, 250, screen.size.width, screen.size.height - 300))
+//    entitiesView?.backgroundColor = UIColor.lightGrayColor()
+//    view.addSubview(entitiesView!)
+//    view.addSubview(intentView!)
+//    intentView?.text = "Intent will show up here"
+//    
+//    // entitiesView?.textAlignment = NSTextAlignment.Center
+//    entitiesView?.text = "Entities will show up here"
+//    entitiesView?.editable = false
+//    entitiesView?.font = UIFont.systemFontOfSize(17)
+//
+//    statusView = UILabel.init(frame: CGRectMake(0, 150, screen.size.width, 50))
+//    statusView?.textAlignment = NSTextAlignment.Center
+//    view.addSubview(statusView!)
   }
 
   func witDidGraspIntent(outcomes: [AnyObject]!, messageId: String!, customData: AnyObject!, error e: NSError!) {
@@ -63,25 +64,25 @@ class WitViewController: UIViewController, WitDelegate {
     let intent = json[0]["intent"].stringValue
     let firstEntity = json[0]["entities"]["menu_item"][0]["value"].stringValue
 
-    intentView?.text = "intent = \(intent)"
-    statusView?.text = ""
-    entitiesView?.text = "\(json.arrayValue)"
-
-    NSLog("firstEntity: \(firstEntity)")
+//    intentView?.text = "intent = \(intent)"
+//    statusView?.text = ""
+//    entitiesView?.text = "\(json.arrayValue)"
+//
+//    NSLog("firstEntity: \(firstEntity)")
 
   }
 
   func witActivityDetectorStarted() {
-    statusView?.text = "Just listening... Waiting for voice activity"
+//    statusView?.text = "Just listening... Waiting for voice activity"
   }
 
   func witDidStartRecording() {
-    statusView?.text = "Witting..."
-    entitiesView?.text = ""
+//    statusView?.text = "Witting..."
+//    entitiesView?.text = ""
   }
 
   func witDidStopRecording() {
-    statusView?.text = "Processing..."
-    entitiesView?.text = ""
+//    statusView?.text = "Processing..."
+//    entitiesView?.text = ""
   }
 }
