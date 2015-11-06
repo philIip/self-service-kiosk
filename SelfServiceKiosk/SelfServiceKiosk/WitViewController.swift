@@ -20,6 +20,7 @@ class WitViewController: UIViewController, WitDelegate, UITableViewDataSource, U
     var items: [Item] = []
     var menu: [Item] = []
 
+    @IBOutlet weak var totalPrice: UILabel!
     @IBOutlet weak var tableView: UITableView!
     
     struct Item {
@@ -80,6 +81,8 @@ class WitViewController: UIViewController, WitDelegate, UITableViewDataSource, U
         total += items[k].price
     }
     
+    totalPrice.text = String(format: "Total: $%.2f", total)
+    
     NSLog("\(total)")
     
     tableView.reloadData()
@@ -117,7 +120,7 @@ class WitViewController: UIViewController, WitDelegate, UITableViewDataSource, U
         cell.imageView?.image = UIImage(named: item.picName)
         return cell
     }
-    
+        
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return items.count
     }
