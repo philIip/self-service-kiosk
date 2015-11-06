@@ -75,6 +75,13 @@ class WitViewController: UIViewController, WitDelegate, UITableViewDataSource, U
         }
     }
     
+    var total = 0.0
+    for k in 0..<items.count {
+        total += items[k].price
+    }
+    
+    NSLog("\(total)")
+    
     tableView.reloadData()
   }
 
@@ -105,7 +112,6 @@ class WitViewController: UIViewController, WitDelegate, UITableViewDataSource, U
         let cell = tableView.dequeueReusableCellWithIdentifier("item", forIndexPath: indexPath)
         let item = items[indexPath.row]
         cell.textLabel?.text = item.name
-//        cell.detailTextLabel?.text = "\(item.price)"
         cell.detailTextLabel?.text = String(format: "%.2f",item.price)
         
         cell.imageView?.image = UIImage(named: item.picName)
