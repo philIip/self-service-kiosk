@@ -13,7 +13,7 @@
 
 static NSString* const kMicrophoneImage = @"microphone.png";
 static const CGFloat kMicHeight = 75.0f;
-static const CGFloat kMicWidth = 50.0f;
+static const CGFloat kMicWidth = 75.0f;
 static const CGFloat kMicMargin = 40.0f;
 
 @interface WITMicButton ()
