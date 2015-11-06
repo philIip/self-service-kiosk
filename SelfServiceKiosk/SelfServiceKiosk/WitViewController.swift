@@ -48,16 +48,23 @@ class WitViewController: UIViewController, WitDelegate, UITableViewDataSource, U
     let intent = json[0]["intent"].stringValue
     let menuItem = json[0]["entities"]["menu_item"][0]["value"].stringValue
     
-    let matchedItem = items.filter({$0.name == menuItem})
+    let matchedItems = menu.filter({$0.name == menuItem})
     
-//    NSLog(matchedItems);
-    
-    if matchedItem.count == 0 {
-        NSLog("here");
+    if matchedItems.count == 0 {
+        // no matched items
     } else {
         switch intent {
-        case "add_order": items.append(matchedItem[0])
-        case "delete_order": break // remove
+        case "add_order": items.append(matchedItems[0])
+        case "delete_order":
+            var index = -1
+            for i in 0..<items.count {
+                if items[i].name == matchedItems[0].name {
+                  index = i
+                }
+            }
+            if index > -1 {
+              items.removeAtIndex(index) // remove
+            }
         default: break // no defined intent error
         }
     }
