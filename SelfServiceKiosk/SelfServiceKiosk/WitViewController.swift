@@ -49,26 +49,30 @@ class WitViewController: UIViewController, WitDelegate, UITableViewDataSource, U
     NSLog("JSON: \(json.arrayValue)")
 
     let intent = json[0]["intent"].stringValue
-    let menuItem = json[0]["entities"]["menu_item"][0]["value"].stringValue
-        
-    let matchedItems = menu.filter({$0.name == menuItem})
+//    let menuItem = json[0]["entities"]["menu_item"][0]["value"].stringValue
     
-    if matchedItems.count == 0 {
-        // no matched items
-    } else {
-        switch intent {
-        case "add_order": items.append(matchedItems[0])
-        case "delete_order":
-            var index = -1
-            for i in 0..<items.count {
-                if items[i].name == matchedItems[0].name {
-                  index = i
+    let menuItems = json[0]["entities"]["menu_item"]
+    
+    for k in 0..<menuItems.count {
+        let menuItem = menuItems[k]["value"].stringValue
+        let matchedItems = menu.filter({$0.name == menuItem})
+        if matchedItems.count == 0 {
+            // no matched items
+        } else {
+            switch intent {
+            case "add_order": items.append(matchedItems[0])
+            case "delete_order":
+                var index = -1
+                for i in 0..<items.count {
+                    if items[i].name == matchedItems[0].name {
+                        index = i
+                    }
                 }
+                if index > -1 {
+                    items.removeAtIndex(index) // remove
+                }
+            default: break // no defined intent error
             }
-            if index > -1 {
-              items.removeAtIndex(index) // remove
-            }
-        default: break // no defined intent error
         }
     }
     
