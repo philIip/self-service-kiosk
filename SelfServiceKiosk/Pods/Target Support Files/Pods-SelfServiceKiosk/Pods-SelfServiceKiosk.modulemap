@@ -1,0 +1,6 @@
+framework module Pods_SelfServiceKiosk {
+  umbrella header "Pods-SelfServiceKiosk-umbrella.h"
+
+  export *
+  module * { export * }
+}

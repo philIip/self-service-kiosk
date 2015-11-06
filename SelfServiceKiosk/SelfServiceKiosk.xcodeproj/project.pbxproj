@@ -1,0 +1,388 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		8180BD0923AD7AA86D386E2D /* Pods_SelfServiceKiosk.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89D732542EBACB35BEAC870B /* Pods_SelfServiceKiosk.framework */; };
+		8875C9541BEC3A0C00EB0C69 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8875C9531BEC3A0C00EB0C69 /* main.m */; };
+		8875C9571BEC3A0C00EB0C69 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8875C9561BEC3A0C00EB0C69 /* AppDelegate.m */; };
+		8875C95D1BEC3A0C00EB0C69 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8875C95B1BEC3A0C00EB0C69 /* Main.storyboard */; };
+		8875C95F1BEC3A0C00EB0C69 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8875C95E1BEC3A0C00EB0C69 /* Assets.xcassets */; };
+		8875C9621BEC3A0C00EB0C69 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8875C9601BEC3A0C00EB0C69 /* LaunchScreen.storyboard */; };
+		8875C96B1BEC3AEE00EB0C69 /* WitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8875C96A1BEC3AEE00EB0C69 /* WitViewController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		8875C94F1BEC3A0C00EB0C69 /* SelfServiceKiosk.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SelfServiceKiosk.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8875C9531BEC3A0C00EB0C69 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		8875C9551BEC3A0C00EB0C69 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		8875C9561BEC3A0C00EB0C69 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		8875C95C1BEC3A0C00EB0C69 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		8875C95E1BEC3A0C00EB0C69 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		8875C9611BEC3A0C00EB0C69 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		8875C9631BEC3A0C00EB0C69 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8875C9691BEC3AEE00EB0C69 /* SelfServiceKiosk-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SelfServiceKiosk-Bridging-Header.h"; sourceTree = "<group>"; };
+		8875C96A1BEC3AEE00EB0C69 /* WitViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WitViewController.swift; sourceTree = "<group>"; };
+		89D732542EBACB35BEAC870B /* Pods_SelfServiceKiosk.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SelfServiceKiosk.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AF5AD0D4BA5D70DD38378531 /* Pods-SelfServiceKiosk.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SelfServiceKiosk.release.xcconfig"; path = "Pods/Target Support Files/Pods-SelfServiceKiosk/Pods-SelfServiceKiosk.release.xcconfig"; sourceTree = "<group>"; };
+		EA4E9533157D0551BF43613B /* Pods-SelfServiceKiosk.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SelfServiceKiosk.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SelfServiceKiosk/Pods-SelfServiceKiosk.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8875C94C1BEC3A0C00EB0C69 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8180BD0923AD7AA86D386E2D /* Pods_SelfServiceKiosk.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		8875C9461BEC3A0C00EB0C69 = {
+			isa = PBXGroup;
+			children = (
+				8875C9511BEC3A0C00EB0C69 /* SelfServiceKiosk */,
+				8875C9501BEC3A0C00EB0C69 /* Products */,
+				D97B9562C9F007DF0A351A41 /* Pods */,
+				F8B1B5D42C821E4E75BA9713 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		8875C9501BEC3A0C00EB0C69 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8875C94F1BEC3A0C00EB0C69 /* SelfServiceKiosk.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		8875C9511BEC3A0C00EB0C69 /* SelfServiceKiosk */ = {
+			isa = PBXGroup;
+			children = (
+				8875C9551BEC3A0C00EB0C69 /* AppDelegate.h */,
+				8875C9561BEC3A0C00EB0C69 /* AppDelegate.m */,
+				8875C95B1BEC3A0C00EB0C69 /* Main.storyboard */,
+				8875C95E1BEC3A0C00EB0C69 /* Assets.xcassets */,
+				8875C9601BEC3A0C00EB0C69 /* LaunchScreen.storyboard */,
+				8875C9631BEC3A0C00EB0C69 /* Info.plist */,
+				8875C9521BEC3A0C00EB0C69 /* Supporting Files */,
+				8875C96A1BEC3AEE00EB0C69 /* WitViewController.swift */,
+				8875C9691BEC3AEE00EB0C69 /* SelfServiceKiosk-Bridging-Header.h */,
+			);
+			path = SelfServiceKiosk;
+			sourceTree = "<group>";
+		};
+		8875C9521BEC3A0C00EB0C69 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				8875C9531BEC3A0C00EB0C69 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		D97B9562C9F007DF0A351A41 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				EA4E9533157D0551BF43613B /* Pods-SelfServiceKiosk.debug.xcconfig */,
+				AF5AD0D4BA5D70DD38378531 /* Pods-SelfServiceKiosk.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		F8B1B5D42C821E4E75BA9713 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				89D732542EBACB35BEAC870B /* Pods_SelfServiceKiosk.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8875C94E1BEC3A0C00EB0C69 /* SelfServiceKiosk */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8875C9661BEC3A0C00EB0C69 /* Build configuration list for PBXNativeTarget "SelfServiceKiosk" */;
+			buildPhases = (
+				FDC31DDC282830370822D7BE /* Check Pods Manifest.lock */,
+				8875C94B1BEC3A0C00EB0C69 /* Sources */,
+				8875C94C1BEC3A0C00EB0C69 /* Frameworks */,
+				8875C94D1BEC3A0C00EB0C69 /* Resources */,
+				F957027864CB59D1621B9526 /* Embed Pods Frameworks */,
+				1897BBC8A40DBAC0854EB753 /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SelfServiceKiosk;
+			productName = SelfServiceKiosk;
+			productReference = 8875C94F1BEC3A0C00EB0C69 /* SelfServiceKiosk.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		8875C9471BEC3A0C00EB0C69 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0710;
+				ORGANIZATIONNAME = Clover;
+				TargetAttributes = {
+					8875C94E1BEC3A0C00EB0C69 = {
+						CreatedOnToolsVersion = 7.1;
+					};
+				};
+			};
+			buildConfigurationList = 8875C94A1BEC3A0C00EB0C69 /* Build configuration list for PBXProject "SelfServiceKiosk" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 8875C9461BEC3A0C00EB0C69;
+			productRefGroup = 8875C9501BEC3A0C00EB0C69 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8875C94E1BEC3A0C00EB0C69 /* SelfServiceKiosk */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8875C94D1BEC3A0C00EB0C69 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8875C9621BEC3A0C00EB0C69 /* LaunchScreen.storyboard in Resources */,
+				8875C95F1BEC3A0C00EB0C69 /* Assets.xcassets in Resources */,
+				8875C95D1BEC3A0C00EB0C69 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1897BBC8A40DBAC0854EB753 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SelfServiceKiosk/Pods-SelfServiceKiosk-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F957027864CB59D1621B9526 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SelfServiceKiosk/Pods-SelfServiceKiosk-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FDC31DDC282830370822D7BE /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8875C94B1BEC3A0C00EB0C69 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8875C96B1BEC3AEE00EB0C69 /* WitViewController.swift in Sources */,
+				8875C9571BEC3A0C00EB0C69 /* AppDelegate.m in Sources */,
+				8875C9541BEC3A0C00EB0C69 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		8875C95B1BEC3A0C00EB0C69 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8875C95C1BEC3A0C00EB0C69 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		8875C9601BEC3A0C00EB0C69 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8875C9611BEC3A0C00EB0C69 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		8875C9641BEC3A0C00EB0C69 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		8875C9651BEC3A0C00EB0C69 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		8875C9671BEC3A0C00EB0C69 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = EA4E9533157D0551BF43613B /* Pods-SelfServiceKiosk.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				INFOPLIST_FILE = SelfServiceKiosk/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.clover.SelfServiceKiosk;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "SelfServiceKiosk/SelfServiceKiosk-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		8875C9681BEC3A0C00EB0C69 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = AF5AD0D4BA5D70DD38378531 /* Pods-SelfServiceKiosk.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				INFOPLIST_FILE = SelfServiceKiosk/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.clover.SelfServiceKiosk;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "SelfServiceKiosk/SelfServiceKiosk-Bridging-Header.h";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		8875C94A1BEC3A0C00EB0C69 /* Build configuration list for PBXProject "SelfServiceKiosk" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8875C9641BEC3A0C00EB0C69 /* Debug */,
+				8875C9651BEC3A0C00EB0C69 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8875C9661BEC3A0C00EB0C69 /* Build configuration list for PBXNativeTarget "SelfServiceKiosk" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8875C9671BEC3A0C00EB0C69 /* Debug */,
+				8875C9681BEC3A0C00EB0C69 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 8875C9471BEC3A0C00EB0C69 /* Project object */;
+}
