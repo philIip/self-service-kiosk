@@ -12,16 +12,19 @@ import SwiftyJSON
 import Wit
 
 
-class WitViewController: UIViewController, WitDelegate {
+class WitViewController: UIViewController, WitDelegate, UITableViewDataSource, UITableViewDelegate {
   var statusView: UILabel?
   var intentView: UILabel?
   var entitiesView: UITextView?
   var witButton: WITMicButton?
+    var items: [String] = []
 
+    @IBOutlet weak var tableView: UITableView!
+    
   override func viewDidLoad() {
     super.viewDidLoad()
     Wit.sharedInstance().delegate = self
-    setupUI()
+//    setupUI()
   }
 
   func setupUI() {
@@ -61,8 +64,11 @@ class WitViewController: UIViewController, WitDelegate {
     let json = JSON(outcomes as! [NSDictionary])
     NSLog("JSON: \(json.arrayValue)")
 
-    let intent = json[0]["intent"].stringValue
+//    let intent = json[0]["intent"].stringValue
     let firstEntity = json[0]["entities"]["menu_item"][0]["value"].stringValue
+    
+    items.append(firstEntity)
+    tableView.reloadData()
 
 //    intentView?.text = "intent = \(intent)"
 //    statusView?.text = ""
@@ -85,4 +91,14 @@ class WitViewController: UIViewController, WitDelegate {
 //    statusView?.text = "Processing..."
 //    entitiesView?.text = ""
   }
+    
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        var cell = tableView.dequeueReusableCellWithIdentifier("item", forIndexPath: indexPath)
+        cell.textLabel?.text = items[indexPath.row]
+        return cell
+    }
+    
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return items.count
+    }
 }
