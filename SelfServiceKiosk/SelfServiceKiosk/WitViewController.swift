@@ -33,6 +33,7 @@ class WitViewController: UIViewController, WitDelegate, UITableViewDataSource, U
     let w: CGFloat = 100
     let rect: CGRect = CGRectMake(screen.size.width/2 - w/2, screen.size.height - (w + w/2), w, w)
 
+    
     witButton = WITMicButton.init(frame: rect)
     view.addSubview(witButton!)
 
