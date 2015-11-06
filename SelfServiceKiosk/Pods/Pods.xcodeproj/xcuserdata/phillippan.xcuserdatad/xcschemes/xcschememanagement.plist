@@ -9,6 +9,11 @@
 			<key>orderHint</key>
 			<integer>1</integer>
 		</dict>
+		<key>MBProgressHUD.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>5</integer>
+		</dict>
 		<key>Pods-SelfServiceKiosk.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
@@ -42,7 +47,27 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>657839E920207E9D6C68C6B40CE4F965</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>A1C246CD09FA9EBE4F4A344DC24182F4</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>BE17C699035B7E220C0EB8129BDDF599</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>C48F7F2DBF35B63671A31CA5E5776EC3</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>E61CE3B6DFA1FE6B3E296965C76C0E10</key>
 		<dict>
 			<key>primary</key>
 			<true/>

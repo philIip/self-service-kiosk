@@ -85,11 +85,13 @@ strip_invalid_archs() {
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "Pods-SelfServiceKiosk/Alamofire.framework"
+  install_framework "Pods-SelfServiceKiosk/MBProgressHUD.framework"
   install_framework "Pods-SelfServiceKiosk/SwiftyJSON.framework"
   install_framework "Pods-SelfServiceKiosk/Wit.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "Pods-SelfServiceKiosk/Alamofire.framework"
+  install_framework "Pods-SelfServiceKiosk/MBProgressHUD.framework"
   install_framework "Pods-SelfServiceKiosk/SwiftyJSON.framework"
   install_framework "Pods-SelfServiceKiosk/Wit.framework"
 fi

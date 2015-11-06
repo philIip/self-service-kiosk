@@ -7,4 +7,5 @@ target 'SelfServiceKiosk' do
   pod "Wit"
   pod "Alamofire"
   pod "SwiftyJSON"
+  pod "MBProgressHUD"
 end
