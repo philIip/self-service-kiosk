@@ -102,6 +102,7 @@
                     <connections>
                         <outlet property="tableView" destination="KbY-Xb-7cC" id="KzH-SI-67O"/>
                         <outlet property="totalPrice" destination="CyP-sO-pn2" id="P04-5r-UCR"/>
+                        <outlet property="witMicButton" destination="LZu-Wr-8L1" id="3VB-T1-dqN"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

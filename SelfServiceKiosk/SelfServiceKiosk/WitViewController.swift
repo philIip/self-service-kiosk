@@ -17,19 +17,20 @@ class WitViewController: UIViewController, WitDelegate, UITableViewDataSource, U
   var intentView: UILabel?
   var entitiesView: UITextView?
   var witButton: WITMicButton?
-    var items: [Item] = []
-    var menu: [Item] = []
+  var items: [Item] = []
+  var menu: [Item] = []
 
-    @IBOutlet weak var totalPrice: UILabel!
-    @IBOutlet weak var tableView: UITableView!
-    
-    struct Item {
-        var id: String
-        var name: String
-        var price: Double
-        var picName: String
-    }
-    
+  @IBOutlet weak var totalPrice: UILabel!
+  @IBOutlet weak var tableView: UITableView!
+  @IBOutlet weak var witMicButton: WITMicButton!
+
+  struct Item {
+    var id: String
+    var name: String
+    var price: Double
+    var picName: String
+  }
+
   override func viewDidLoad() {
     super.viewDidLoad()
     Wit.sharedInstance().delegate = self
@@ -47,50 +48,46 @@ class WitViewController: UIViewController, WitDelegate, UITableViewDataSource, U
     }
 
     let json = JSON(outcomes as! [NSDictionary])
-    NSLog("JSON: \(json.arrayValue)")
+    print("JSON: \(json.arrayValue)")
 
-    let intent = json[0]["intent"].stringValue    
+    let intent = json[0]["intent"].stringValue
     let menuItems = json[0]["entities"]["menu_item"]
-    
+
     for k in 0..<menuItems.count {
-        let menuItem = menuItems[k]["value"].stringValue
-        let matchedItems = menu.filter({$0.name == menuItem})
-        if matchedItems.count == 0 {
-            // no matched items
-            showErrorMessage("The item \(menuItem) is not on our menu")
-        } else {
-            switch intent {
-            case "add_order": items.append(matchedItems[0])
-            case "delete_order":
-                var index = -1
-                for i in 0..<items.count {
-                    if items[i].name == matchedItems[0].name {
-                        index = i
-                    }
-                }
-                if index > -1 {
-                    items.removeAtIndex(index) // remove
-                }
-            default: break // no defined intent error
+      let menuItem = menuItems[k]["value"].stringValue
+      let matchedItems = menu.filter({$0.name == menuItem})
+      if matchedItems.count == 0 {
+        // no matched items
+        showErrorMessage("The item \(menuItem) is not on our menu")
+      } else {
+        switch intent {
+        case "add_order": items.append(matchedItems[0])
+        case "delete_order":
+          var index = -1
+          for i in 0..<items.count {
+            if items[i].name == matchedItems[0].name {
+              index = i
             }
+          }
+          if index > -1 {
+            items.removeAtIndex(index)
+          }
+        default: break // no defined intent error
         }
+      }
     }
-    
+
     var total = 0.0
     for k in 0..<items.count {
-        total += items[k].price
+      total += items[k].price
     }
-    
+
     totalPrice.text = String(format: "Total: $%.2f", total)
-    
-    NSLog("\(total)")
-    
     tableView.reloadData()
   }
 
   func showErrorMessage(text: String) {
     let hud = MBProgressHUD.showHUDAddedTo(view, animated: true)
-    //    hud.activityIndicatorColor = UIColor.redColor()
     hud.mode = MBProgressHUDMode.Text
     hud.animationType = MBProgressHUDAnimation.Fade
     hud.labelText = text
@@ -98,30 +95,28 @@ class WitViewController: UIViewController, WitDelegate, UITableViewDataSource, U
   }
 
   func witActivityDetectorStarted() {
-//    statusView?.text = "Just listening... Waiting for voice activity"
+    print("Just listening... Waiting for voice activity")
   }
 
   func witDidStartRecording() {
-//    statusView?.text = "Witting..."
-//    entitiesView?.text = ""
+    print("Witting...")
   }
 
   func witDidStopRecording() {
-//    statusView?.text = "Processing..."
-//    entitiesView?.text = ""
+    print("Processing...")
   }
-    
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("item", forIndexPath: indexPath)
-        let item = items[indexPath.row]
-        cell.textLabel?.text = item.name
-        cell.detailTextLabel?.text = String(format: "%.2f",item.price)
-        
-        cell.imageView?.image = UIImage(named: item.picName)
-        return cell
-    }
-        
-    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return items.count
-    }
+
+  func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+    let cell = tableView.dequeueReusableCellWithIdentifier("item", forIndexPath: indexPath)
+    let item = items[indexPath.row]
+    cell.textLabel?.text = item.name
+    cell.detailTextLabel?.text = String(format: "%.2f",item.price)
+
+    cell.imageView?.image = UIImage(named: item.picName)
+    return cell
+  }
+
+  func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    return items.count
+  }
 }
